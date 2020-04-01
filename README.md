@@ -1,7 +1,7 @@
 # haziris
 Visualizations for Python
 
-- [Wiki](https://github.com/haziris/wiki)
+- [Wiki](https://github.com/haziris/haziris-python/wiki)
 
 ## Installation
 Binary installers for the latest released version are available at the [Python
