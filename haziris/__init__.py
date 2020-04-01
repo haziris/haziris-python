@@ -17,6 +17,10 @@ from .google.google_material_scatter_chart import google_material_scatter_chart
 from .google.google_timeline_chart import google_timeline_chart
 from .google.google_treemap_chart import google_treemap_chart
 
+from .datatables.datatables import datatables
+from .datatables.datatables_bootstrap4 import datatables_bootstrap4
+from .datatables.datatables_material import datatables_material
+
 
 __all__ ={
   'google_area_chart',
@@ -36,5 +40,8 @@ __all__ ={
   'google_scatter_chart',
   'google_material_scatter_chart',
   'google_timeline_chart',
-  'google_treemap_chart'
+  'google_treemap_chart',
+  'datatables',
+  'datatables_bootstrap4',
+  'datatables_material'
 }

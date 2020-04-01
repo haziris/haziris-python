@@ -1,6 +1,6 @@
 from setuptools import setup
 setup(name='haziris',
-      version='0.3.0',
+      version='0.4.0',
       description='HTML and JS Visualization templates',
       url='http://github.com/haziris',
       author='Naushad Pasha Puliyambalath',
