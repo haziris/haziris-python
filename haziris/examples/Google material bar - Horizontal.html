@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Material Bar Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleMaterialBarChart( df, options ){
+
+      google.charts.load('current', {'packages': ['bar']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.charts.Bar(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( df ), options );
+      }
+  }
+  googleMaterialBarChart(
+    [
+    [
+        "Year",
+        "Sales",
+        "Expenses",
+        "Profit"
+    ],
+    [
+        "2014",
+        1000,
+        400,
+        200
+    ],
+    [
+        "2015",
+        1170,
+        460,
+        250
+    ],
+    [
+        "2016",
+        660,
+        1120,
+        300
+    ],
+    [
+        "2017",
+        1030,
+        540,
+        350
+    ]
+],{
+    "bars": "horizontal"
+}
+  )
+  </script>
+ </div>
+</body>
+</html>

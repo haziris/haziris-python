@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Area Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleBarChart( df, options ){
+
+      google.charts.load('current', {'packages': ['corechart']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.visualization.BarChart(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( df ), options );
+      }
+  }
+  googleBarChart(
+    [
+    [
+        "Name",
+        "a",
+        "b",
+        "c",
+        "d"
+    ],
+    [
+        "0",
+        0.5253350990223346,
+        0.2902446259244207,
+        0.7894251009945705,
+        0.02612912295372649
+    ],
+    [
+        "1",
+        0.479741010990514,
+        0.5710510907978865,
+        0.7810137715007784,
+        0.1137571415861035
+    ],
+    [
+        "2",
+        0.3054149441202908,
+        0.6149584840556569,
+        0.27291301863952233,
+        0.025728772104656183
+    ],
+    [
+        "3",
+        0.9732485143415528,
+        0.3795904199152855,
+        0.49212598658961393,
+        0.6480529154452707
+    ],
+    [
+        "4",
+        0.9232743903755446,
+        0.8236920316066492,
+        0.665005124188342,
+        0.5323225407330656
+    ]
+],{}
+  )
+  </script>
+ </div>
+</body>
+</html>

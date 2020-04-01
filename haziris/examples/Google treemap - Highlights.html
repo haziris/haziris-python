@@ -1,0 +1,1920 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Timelines Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleTreemapChart( df, options ){
+
+      google.charts.load('current', {'packages': ['treemap']})
+
+      let data = df.map( d => ( d.map( x=> x !== x ? null : x ) ) )
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.visualization.TreeMap(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( data ), options );
+      }
+    }
+    googleTreemapChart(
+      [
+    [
+        "ID",
+        "Parent",
+        "Number Of Lines"
+    ],
+    [
+        "Shakespeare",
+        NaN,
+        0.0
+    ],
+    [
+        "Comedies",
+        "Shakespeare",
+        NaN
+    ],
+    [
+        "Tragedies",
+        "Shakespeare",
+        NaN
+    ],
+    [
+        "Histories",
+        "Shakespeare",
+        NaN
+    ],
+    [
+        "As You Like It",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Adam",
+        "As You Like It",
+        10.0
+    ],
+    [
+        "Amiens",
+        "As You Like It",
+        10.0
+    ],
+    [
+        "Audrey",
+        "As You Like It",
+        12.0
+    ],
+    [
+        "Celia",
+        "As You Like It",
+        108.0
+    ],
+    [
+        "Charles",
+        "As You Like It",
+        8.0
+    ],
+    [
+        "Corin",
+        "As You Like It",
+        24.0
+    ],
+    [
+        "Dennis",
+        "As You Like It",
+        2.0
+    ],
+    [
+        "Duke",
+        "As You Like It",
+        32.0
+    ],
+    [
+        "Frederick",
+        "As You Like It",
+        20.0
+    ],
+    [
+        "Hymen",
+        "As You Like It",
+        1.0
+    ],
+    [
+        "Jaques (lord)",
+        "As You Like It",
+        57.0
+    ],
+    [
+        "Jaques (son)",
+        "As You Like It",
+        2.0
+    ],
+    [
+        "Le Beau",
+        "As You Like It",
+        14.0
+    ],
+    [
+        "Oliver",
+        "As You Like It",
+        37.0
+    ],
+    [
+        "Orlando",
+        "As You Like It",
+        120.0
+    ],
+    [
+        "Phebe",
+        "As You Like It",
+        23.0
+    ],
+    [
+        "Rosalind",
+        "As You Like It",
+        201.0
+    ],
+    [
+        "Silvius",
+        "As You Like It",
+        24.0
+    ],
+    [
+        "Sir Oliver Martext",
+        "As You Like It",
+        3.0
+    ],
+    [
+        "Touchstone",
+        "As You Like It",
+        74.0
+    ],
+    [
+        "William",
+        "As You Like It",
+        11.0
+    ],
+    [
+        "Comedy Of Errors",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Adriana",
+        "Comedy Of Errors",
+        79.0
+    ],
+    [
+        "Aegeon",
+        "Comedy Of Errors",
+        17.0
+    ],
+    [
+        "Aemilia",
+        "Comedy Of Errors",
+        16.0
+    ],
+    [
+        "Angelo",
+        "Comedy Of Errors",
+        31.0
+    ],
+    [
+        "Antipholus of Ephesus",
+        "Comedy Of Errors",
+        76.0
+    ],
+    [
+        "Antipholus of Syracuse",
+        "Comedy Of Errors",
+        103.0
+    ],
+    [
+        "Balthazar",
+        "Comedy Of Errors",
+        5.0
+    ],
+    [
+        "Courtezan",
+        "Comedy Of Errors",
+        11.0
+    ],
+    [
+        "Dromio of Ephesus",
+        "Comedy Of Errors",
+        63.0
+    ],
+    [
+        "Dromio of Syracuse",
+        "Comedy Of Errors",
+        99.0
+    ],
+    [
+        "Luce",
+        "Comedy Of Errors",
+        7.0
+    ],
+    [
+        "Luciana",
+        "Comedy Of Errors",
+        43.0
+    ],
+    [
+        "Pinch",
+        "Comedy Of Errors",
+        6.0
+    ],
+    [
+        "Solinus",
+        "Comedy Of Errors",
+        22.0
+    ],
+    [
+        "Merchant Of Venice",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Antonio",
+        "Merchant Of Venice",
+        47.0
+    ],
+    [
+        "Balthasar",
+        "Merchant Of Venice",
+        1.0
+    ],
+    [
+        "Bassanio",
+        "Merchant Of Venice",
+        73.0
+    ],
+    [
+        "Duke (of Venice)",
+        "Merchant Of Venice",
+        18.0
+    ],
+    [
+        "Gratiano",
+        "Merchant Of Venice",
+        48.0
+    ],
+    [
+        "Jessica",
+        "Merchant Of Venice",
+        26.0
+    ],
+    [
+        "Launcelot Gobbo",
+        "Merchant Of Venice",
+        44.0
+    ],
+    [
+        "Leonardo",
+        "Merchant Of Venice",
+        2.0
+    ],
+    [
+        "Lorenzo",
+        "Merchant Of Venice",
+        47.0
+    ],
+    [
+        "Nerissa",
+        "Merchant Of Venice",
+        36.0
+    ],
+    [
+        "Old Gobbo",
+        "Merchant Of Venice",
+        19.0
+    ],
+    [
+        "Portia",
+        "Merchant Of Venice",
+        117.0
+    ],
+    [
+        "Prince of Arragon",
+        "Merchant Of Venice",
+        4.0
+    ],
+    [
+        "Prince of Morocco",
+        "Merchant Of Venice",
+        7.0
+    ],
+    [
+        "Salanio",
+        "Merchant Of Venice",
+        18.0
+    ],
+    [
+        "Salarino",
+        "Merchant Of Venice",
+        27.0
+    ],
+    [
+        "Salerio",
+        "Merchant Of Venice",
+        6.0
+    ],
+    [
+        "Shylock",
+        "Merchant Of Venice",
+        79.0
+    ],
+    [
+        "Stephano",
+        "Merchant Of Venice",
+        3.0
+    ],
+    [
+        "Tubal",
+        "Merchant Of Venice",
+        8.0
+    ],
+    [
+        "Midsummer Nights Dream",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Bottom",
+        "Midsummer Nights Dream",
+        59.0
+    ],
+    [
+        "Cobweb",
+        "Midsummer Nights Dream",
+        4.0
+    ],
+    [
+        "Demetrius",
+        "Midsummer Nights Dream",
+        48.0
+    ],
+    [
+        "Egeus",
+        "Midsummer Nights Dream",
+        7.0
+    ],
+    [
+        "Fairy",
+        "Midsummer Nights Dream",
+        4.0
+    ],
+    [
+        "Flute",
+        "Midsummer Nights Dream",
+        18.0
+    ],
+    [
+        "Helena",
+        "Midsummer Nights Dream",
+        36.0
+    ],
+    [
+        "Hermia",
+        "Midsummer Nights Dream",
+        48.0
+    ],
+    [
+        "Hippolyta",
+        "Midsummer Nights Dream",
+        14.0
+    ],
+    [
+        "Lysander",
+        "Midsummer Nights Dream",
+        50.0
+    ],
+    [
+        "Moth",
+        "Midsummer Nights Dream",
+        2.0
+    ],
+    [
+        "Mustardseed",
+        "Midsummer Nights Dream",
+        5.0
+    ],
+    [
+        "Oberon",
+        "Midsummer Nights Dream",
+        29.0
+    ],
+    [
+        "Peaseblossom",
+        "Midsummer Nights Dream",
+        4.0
+    ],
+    [
+        "Philostrate",
+        "Midsummer Nights Dream",
+        6.0
+    ],
+    [
+        "Puck",
+        "Midsummer Nights Dream",
+        33.0
+    ],
+    [
+        "Quince",
+        "Midsummer Nights Dream",
+        40.0
+    ],
+    [
+        "Snout",
+        "Midsummer Nights Dream",
+        9.0
+    ],
+    [
+        "Snug",
+        "Midsummer Nights Dream",
+        4.0
+    ],
+    [
+        "Starveling",
+        "Midsummer Nights Dream",
+        7.0
+    ],
+    [
+        "Theseus",
+        "Midsummer Nights Dream",
+        48.0
+    ],
+    [
+        "Titania",
+        "Midsummer Nights Dream",
+        23.0
+    ],
+    [
+        "Taming Of The Shrew",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Baptista Minola",
+        "Taming Of The Shrew",
+        68.0
+    ],
+    [
+        "Bianca",
+        "Taming Of The Shrew",
+        29.0
+    ],
+    [
+        "Biondello",
+        "Taming Of The Shrew",
+        39.0
+    ],
+    [
+        "Christopher Sly",
+        "Taming Of The Shrew",
+        24.0
+    ],
+    [
+        "Curtis",
+        "Taming Of The Shrew",
+        20.0
+    ],
+    [
+        "Gremio",
+        "Taming Of The Shrew",
+        58.0
+    ],
+    [
+        "Grumio",
+        "Taming Of The Shrew",
+        63.0
+    ],
+    [
+        "Haberdasher",
+        "Taming Of The Shrew",
+        1.0
+    ],
+    [
+        "Hortensio",
+        "Taming Of The Shrew",
+        70.0
+    ],
+    [
+        "Joseph",
+        "Taming Of The Shrew",
+        1.0
+    ],
+    [
+        "Katherina",
+        "Taming Of The Shrew",
+        82.0
+    ],
+    [
+        "Lucentio",
+        "Taming Of The Shrew",
+        61.0
+    ],
+    [
+        "Nathaniel",
+        "Taming Of The Shrew",
+        4.0
+    ],
+    [
+        "Nicholas",
+        "Taming Of The Shrew",
+        1.0
+    ],
+    [
+        "Peter",
+        "Taming Of The Shrew",
+        2.0
+    ],
+    [
+        "Petruchio",
+        "Taming Of The Shrew",
+        158.0
+    ],
+    [
+        "Philip",
+        "Taming Of The Shrew",
+        1.0
+    ],
+    [
+        "Tranio",
+        "Taming Of The Shrew",
+        90.0
+    ],
+    [
+        "Vincentio",
+        "Taming Of The Shrew",
+        23.0
+    ],
+    [
+        "The Tempest",
+        "Comedies",
+        NaN
+    ],
+    [
+        "Adrian",
+        "The Tempest",
+        9.0
+    ],
+    [
+        "Alonso",
+        "The Tempest",
+        40.0
+    ],
+    [
+        "Antonio, duke of Milan",
+        "The Tempest",
+        57.0
+    ],
+    [
+        "Ariel",
+        "The Tempest",
+        45.0
+    ],
+    [
+        "Caliban",
+        "The Tempest",
+        50.0
+    ],
+    [
+        "Ceres",
+        "The Tempest",
+        4.0
+    ],
+    [
+        "Ferdinand",
+        "The Tempest",
+        31.0
+    ],
+    [
+        "Francisco",
+        "The Tempest",
+        2.0
+    ],
+    [
+        "Gonzalo",
+        "The Tempest",
+        52.0
+    ],
+    [
+        "Iris",
+        "The Tempest",
+        4.0
+    ],
+    [
+        "Juno",
+        "The Tempest",
+        2.0
+    ],
+    [
+        "Master",
+        "The Tempest",
+        2.0
+    ],
+    [
+        "Miranda",
+        "The Tempest",
+        50.0
+    ],
+    [
+        "Nymphs",
+        "The Tempest",
+        0.0
+    ],
+    [
+        "Prospero",
+        "The Tempest",
+        114.0
+    ],
+    [
+        "Reapers",
+        "The Tempest",
+        0.0
+    ],
+    [
+        "Sebastian",
+        "The Tempest",
+        67.0
+    ],
+    [
+        "Stephano (Servant to Portia)",
+        "The Tempest",
+        60.0
+    ],
+    [
+        "Trinculo",
+        "The Tempest",
+        39.0
+    ],
+    [
+        "Henry VIII",
+        "Histories",
+        NaN
+    ],
+    [
+        "Anne Bullen",
+        "Henry VIII",
+        18.0
+    ],
+    [
+        "Archbishop Cranmer",
+        "Henry VIII",
+        21.0
+    ],
+    [
+        "Bishop Lincoln",
+        "Henry VIII",
+        2.0
+    ],
+    [
+        "Brandon",
+        "Henry VIII",
+        6.0
+    ],
+    [
+        "Capucius",
+        "Henry VIII",
+        5.0
+    ],
+    [
+        "Cardinal Campeius",
+        "Henry VIII",
+        14.0
+    ],
+    [
+        "Cardinal Wolsey",
+        "Henry VIII",
+        79.0
+    ],
+    [
+        "Cromwell",
+        "Henry VIII",
+        21.0
+    ],
+    [
+        "Doctor Butts",
+        "Henry VIII",
+        4.0
+    ],
+    [
+        "Duke of Buckingham",
+        "Henry VIII",
+        26.0
+    ],
+    [
+        "Duke of Norfolk",
+        "Henry VIII",
+        48.0
+    ],
+    [
+        "Duke of Suffolk",
+        "Henry VIII",
+        30.0
+    ],
+    [
+        "Earl of Surrey",
+        "Henry VIII",
+        24.0
+    ],
+    [
+        "First Secretary to Wolsey",
+        "Henry VIII",
+        2.0
+    ],
+    [
+        "Gardiner",
+        "Henry VIII",
+        22.0
+    ],
+    [
+        "Garter",
+        "Henry VIII",
+        1.0
+    ],
+    [
+        "Griffith",
+        "Henry VIII",
+        13.0
+    ],
+    [
+        "King Henry VIII",
+        "Henry VIII",
+        81.0
+    ],
+    [
+        "Lord Abergavenny",
+        "Henry VIII",
+        5.0
+    ],
+    [
+        "Lord Chamberlain",
+        "Henry VIII",
+        38.0
+    ],
+    [
+        "Lord Chancellor",
+        "Henry VIII",
+        7.0
+    ],
+    [
+        "Lord Sands",
+        "Henry VIII",
+        17.0
+    ],
+    [
+        "Old Lady",
+        "Henry VIII",
+        14.0
+    ],
+    [
+        "Patience",
+        "Henry VIII",
+        3.0
+    ],
+    [
+        "Porter (door-keeper of the Council-chamber)",
+        "Henry VIII",
+        10.0
+    ],
+    [
+        "Queen Katharine",
+        "Henry VIII",
+        50.0
+    ],
+    [
+        "Sir Anthony Denny",
+        "Henry VIII",
+        3.0
+    ],
+    [
+        "Sir Henry Guildford",
+        "Henry VIII",
+        1.0
+    ],
+    [
+        "Sir Nicholas Vaux",
+        "Henry VIII",
+        1.0
+    ],
+    [
+        "Sir Thomas Lovell",
+        "Henry VIII",
+        21.0
+    ],
+    [
+        "Surveyor to the Duke of Buckingham",
+        "Henry VIII",
+        9.0
+    ],
+    [
+        "History Of King John",
+        "Histories",
+        NaN
+    ],
+    [
+        "Arthur Duke of Bretagne",
+        "History Of King John",
+        23.0
+    ],
+    [
+        "Blanch",
+        "History Of King John",
+        9.0
+    ],
+    [
+        "Cardinal Pandulph",
+        "History Of King John",
+        23.0
+    ],
+    [
+        "Chatillon",
+        "History Of King John",
+        5.0
+    ],
+    [
+        "Constance",
+        "History Of King John",
+        36.0
+    ],
+    [
+        "Essex",
+        "History Of King John",
+        1.0
+    ],
+    [
+        "Faulconbridge",
+        "History Of King John",
+        4.0
+    ],
+    [
+        "Hubert de Burgh",
+        "History Of King John",
+        52.0
+    ],
+    [
+        "James Gurney",
+        "History Of King John",
+        1.0
+    ],
+    [
+        "King John",
+        "History Of King John",
+        95.0
+    ],
+    [
+        "King Phillip",
+        "History Of King John",
+        43.0
+    ],
+    [
+        "Lady Faulconbridge",
+        "History Of King John",
+        5.0
+    ],
+    [
+        "Lewis the Dauphin",
+        "History Of King John",
+        29.0
+    ],
+    [
+        "Lord Bigot",
+        "History Of King John",
+        6.0
+    ],
+    [
+        "Lymoges duke of Austria",
+        "History Of King John",
+        16.0
+    ],
+    [
+        "Melun",
+        "History Of King John",
+        3.0
+    ],
+    [
+        "Pembroke earl of Pembroke",
+        "History Of King John",
+        20.0
+    ],
+    [
+        "Peter of Pomfret",
+        "History Of King John",
+        1.0
+    ],
+    [
+        "Philip the Bastard",
+        "History Of King John",
+        89.0
+    ],
+    [
+        "Prince Henry",
+        "History Of King John",
+        8.0
+    ],
+    [
+        "Queen Elinor",
+        "History Of King John",
+        22.0
+    ],
+    [
+        "Salisbury earl of Salisbury",
+        "History Of King John",
+        36.0
+    ],
+    [
+        "Antony And Cleopatra",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Agrippa",
+        "Antony And Cleopatra",
+        28.0
+    ],
+    [
+        "Alexas",
+        "Antony And Cleopatra",
+        15.0
+    ],
+    [
+        "Antony",
+        "Antony And Cleopatra",
+        202.0
+    ],
+    [
+        "Canidius",
+        "Antony And Cleopatra",
+        10.0
+    ],
+    [
+        "Captain",
+        "Antony And Cleopatra",
+        1.0
+    ],
+    [
+        "Charmian",
+        "Antony And Cleopatra",
+        63.0
+    ],
+    [
+        "Cleopatra",
+        "Antony And Cleopatra",
+        204.0
+    ],
+    [
+        "Demetrius (Friend to Antony)",
+        "Antony And Cleopatra",
+        2.0
+    ],
+    [
+        "Dercetas",
+        "Antony And Cleopatra",
+        5.0
+    ],
+    [
+        "Diomedes",
+        "Antony And Cleopatra",
+        7.0
+    ],
+    [
+        "Dolabella",
+        "Antony And Cleopatra",
+        23.0
+    ],
+    [
+        "Domitius Enobarus",
+        "Antony And Cleopatra",
+        113.0
+    ],
+    [
+        "Egyptian",
+        "Antony And Cleopatra",
+        2.0
+    ],
+    [
+        "Eros",
+        "Antony And Cleopatra",
+        27.0
+    ],
+    [
+        "Euphronius",
+        "Antony And Cleopatra",
+        5.0
+    ],
+    [
+        "Gallus",
+        "Antony And Cleopatra",
+        1.0
+    ],
+    [
+        "Iras",
+        "Antony And Cleopatra",
+        18.0
+    ],
+    [
+        "Lepidus",
+        "Antony And Cleopatra",
+        30.0
+    ],
+    [
+        "Mardian",
+        "Antony And Cleopatra",
+        7.0
+    ],
+    [
+        "Mecaenas",
+        "Antony And Cleopatra",
+        16.0
+    ],
+    [
+        "Menas",
+        "Antony And Cleopatra",
+        35.0
+    ],
+    [
+        "Menecrates",
+        "Antony And Cleopatra",
+        2.0
+    ],
+    [
+        "Octavia",
+        "Antony And Cleopatra",
+        13.0
+    ],
+    [
+        "Octavius",
+        "Antony And Cleopatra",
+        98.0
+    ],
+    [
+        "Philo",
+        "Antony And Cleopatra",
+        2.0
+    ],
+    [
+        "Pompey",
+        "Antony And Cleopatra",
+        41.0
+    ],
+    [
+        "Proculeius",
+        "Antony And Cleopatra",
+        10.0
+    ],
+    [
+        "Scarus",
+        "Antony And Cleopatra",
+        12.0
+    ],
+    [
+        "Seleucus",
+        "Antony And Cleopatra",
+        3.0
+    ],
+    [
+        "Silius",
+        "Antony And Cleopatra",
+        3.0
+    ],
+    [
+        "Taurus",
+        "Antony And Cleopatra",
+        1.0
+    ],
+    [
+        "Thyreus",
+        "Antony And Cleopatra",
+        12.0
+    ],
+    [
+        "Varrius",
+        "Antony And Cleopatra",
+        1.0
+    ],
+    [
+        "Ventidius",
+        "Antony And Cleopatra",
+        4.0
+    ],
+    [
+        "Coriolanus",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Aedile",
+        "Coriolanus",
+        10.0
+    ],
+    [
+        "Cominius",
+        "Coriolanus",
+        67.0
+    ],
+    [
+        "Coriolanus (Caius Marcius Coriolanus)",
+        "Coriolanus",
+        189.0
+    ],
+    [
+        "Junius Brutus",
+        "Coriolanus",
+        91.0
+    ],
+    [
+        "Lieutenant",
+        "Coriolanus",
+        4.0
+    ],
+    [
+        "Menenius Agrippa",
+        "Coriolanus",
+        162.0
+    ],
+    [
+        "Patrician",
+        "Coriolanus",
+        3.0
+    ],
+    [
+        "Roman",
+        "Coriolanus",
+        10.0
+    ],
+    [
+        "Sicinius Velutus",
+        "Coriolanus",
+        117.0
+    ],
+    [
+        "Titus Lartius",
+        "Coriolanus",
+        23.0
+    ],
+    [
+        "Tullus Aufidius",
+        "Coriolanus",
+        45.0
+    ],
+    [
+        "Valeria",
+        "Coriolanus",
+        14.0
+    ],
+    [
+        "Virgilia",
+        "Coriolanus",
+        26.0
+    ],
+    [
+        "Volsce",
+        "Coriolanus",
+        9.0
+    ],
+    [
+        "Volumnia",
+        "Coriolanus",
+        57.0
+    ],
+    [
+        "Young Coriolanus",
+        "Coriolanus",
+        1.0
+    ],
+    [
+        "Cymbeline",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Arviragus",
+        "Cymbeline",
+        46.0
+    ],
+    [
+        "Belarius",
+        "Cymbeline",
+        58.0
+    ],
+    [
+        "Caius Lucius",
+        "Cymbeline",
+        25.0
+    ],
+    [
+        "Cloten",
+        "Cymbeline",
+        77.0
+    ],
+    [
+        "Cornelius (physician)",
+        "Cymbeline",
+        13.0
+    ],
+    [
+        "Cymbeline, King of Britain",
+        "Cymbeline",
+        81.0
+    ],
+    [
+        "Guiderius",
+        "Cymbeline",
+        62.0
+    ],
+    [
+        "Helen",
+        "Cymbeline",
+        0.0
+    ],
+    [
+        "Iachimo",
+        "Cymbeline",
+        77.0
+    ],
+    [
+        "Imogen",
+        "Cymbeline",
+        118.0
+    ],
+    [
+        "Jupiter",
+        "Cymbeline",
+        1.0
+    ],
+    [
+        "Philario",
+        "Cymbeline",
+        14.0
+    ],
+    [
+        "Pisanio",
+        "Cymbeline",
+        58.0
+    ],
+    [
+        "Posthumus Leonatus",
+        "Cymbeline",
+        77.0
+    ],
+    [
+        "Queen",
+        "Cymbeline",
+        27.0
+    ],
+    [
+        "Roman Captain",
+        "Cymbeline",
+        4.0
+    ],
+    [
+        "Sicilius Leonatus",
+        "Cymbeline",
+        7.0
+    ],
+    [
+        "The Tragedy of Hamlet, Prince of Denmark",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Bernardo",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        19.0
+    ],
+    [
+        "Claudius, King of Denmark",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        102.0
+    ],
+    [
+        "Cornelius",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        1.0
+    ],
+    [
+        "Fathers Ghost",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        15.0
+    ],
+    [
+        "Fortinbras",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        6.0
+    ],
+    [
+        "Francisco ",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        8.0
+    ],
+    [
+        "Gertrude",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        69.0
+    ],
+    [
+        "Guildenstern",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        29.0
+    ],
+    [
+        "Hamlet",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        358.0
+    ],
+    [
+        "Horatio",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        109.0
+    ],
+    [
+        "Laertes",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        62.0
+    ],
+    [
+        "Lucianus",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        0.0
+    ],
+    [
+        "Marcellus",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        37.0
+    ],
+    [
+        "Ophelia",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        58.0
+    ],
+    [
+        "Osric",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        25.0
+    ],
+    [
+        "Polonius",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        86.0
+    ],
+    [
+        "Reynaldo",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        13.0
+    ],
+    [
+        "Rosencrantz",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        48.0
+    ],
+    [
+        "Voltemand",
+        "The Tragedy of Hamlet, Prince of Denmark",
+        1.0
+    ],
+    [
+        "Julius Caesar",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Antony (Marcus Antonius)",
+        "Julius Caesar",
+        51.0
+    ],
+    [
+        "Artemidorus of Cnidos",
+        "Julius Caesar",
+        4.0
+    ],
+    [
+        "Brutus (Marcus Brutus)",
+        "Julius Caesar",
+        194.0
+    ],
+    [
+        "Caesar (Julius Caesar)",
+        "Julius Caesar",
+        42.0
+    ],
+    [
+        "Calpurnia",
+        "Julius Caesar",
+        6.0
+    ],
+    [
+        "Casca",
+        "Julius Caesar",
+        39.0
+    ],
+    [
+        "Cassius",
+        "Julius Caesar",
+        140.0
+    ],
+    [
+        "Cicero",
+        "Julius Caesar",
+        4.0
+    ],
+    [
+        "Cinna",
+        "Julius Caesar",
+        11.0
+    ],
+    [
+        "Cinna the Poet",
+        "Julius Caesar",
+        8.0
+    ],
+    [
+        "Claudius",
+        "Julius Caesar",
+        2.0
+    ],
+    [
+        "Clitus",
+        "Julius Caesar",
+        8.0
+    ],
+    [
+        "Dardanius",
+        "Julius Caesar",
+        3.0
+    ],
+    [
+        "Decius Brutus",
+        "Julius Caesar",
+        12.0
+    ],
+    [
+        "Flavius",
+        "Julius Caesar",
+        5.0
+    ],
+    [
+        "Lepidus (Marcus Antonius Lepidus)",
+        "Julius Caesar",
+        3.0
+    ],
+    [
+        "Ligarius",
+        "Julius Caesar",
+        5.0
+    ],
+    [
+        "Lucilius",
+        "Julius Caesar",
+        10.0
+    ],
+    [
+        "Lucius",
+        "Julius Caesar",
+        24.0
+    ],
+    [
+        "Marullus",
+        "Julius Caesar",
+        6.0
+    ],
+    [
+        "Messala",
+        "Julius Caesar",
+        20.0
+    ],
+    [
+        "Metellus Cimber",
+        "Julius Caesar",
+        5.0
+    ],
+    [
+        "Octavius (Octavius Caesar)",
+        "Julius Caesar",
+        19.0
+    ],
+    [
+        "Pindarus",
+        "Julius Caesar",
+        5.0
+    ],
+    [
+        "Popilius (Popilius Lena)",
+        "Julius Caesar",
+        2.0
+    ],
+    [
+        "Portia (wife of Brutus)",
+        "Julius Caesar",
+        16.0
+    ],
+    [
+        "Publius",
+        "Julius Caesar",
+        2.0
+    ],
+    [
+        "Strato",
+        "Julius Caesar",
+        4.0
+    ],
+    [
+        "Tintinius",
+        "Julius Caesar",
+        10.0
+    ],
+    [
+        "Trebonius",
+        "Julius Caesar",
+        4.0
+    ],
+    [
+        "Varro",
+        "Julius Caesar",
+        6.0
+    ],
+    [
+        "Volumnius",
+        "Julius Caesar",
+        3.0
+    ],
+    [
+        "Young Cato",
+        "Julius Caesar",
+        3.0
+    ],
+    [
+        "King Lear",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Cordelia",
+        "King Lear",
+        31.0
+    ],
+    [
+        "Curan",
+        "King Lear",
+        4.0
+    ],
+    [
+        "Duke of Albany",
+        "King Lear",
+        58.0
+    ],
+    [
+        "Duke of Burgundy",
+        "King Lear",
+        5.0
+    ],
+    [
+        "Duke of Cornwall",
+        "King Lear",
+        53.0
+    ],
+    [
+        "Earl of Gloucester",
+        "King Lear",
+        118.0
+    ],
+    [
+        "Earl of Kent",
+        "King Lear",
+        127.0
+    ],
+    [
+        "Edgar",
+        "King Lear",
+        98.0
+    ],
+    [
+        "Edmund",
+        "King Lear",
+        79.0
+    ],
+    [
+        "Goneril",
+        "King Lear",
+        53.0
+    ],
+    [
+        "King of France",
+        "King Lear",
+        5.0
+    ],
+    [
+        "Lear",
+        "King Lear",
+        188.0
+    ],
+    [
+        "Oswald",
+        "King Lear",
+        38.0
+    ],
+    [
+        "Regan",
+        "King Lear",
+        73.0
+    ],
+    [
+        "The Tragedy Of Macbeth",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Angus",
+        "The Tragedy Of Macbeth",
+        4.0
+    ],
+    [
+        "Banquo",
+        "The Tragedy Of Macbeth",
+        33.0
+    ],
+    [
+        "Caithness",
+        "The Tragedy Of Macbeth",
+        3.0
+    ],
+    [
+        "Donalbain",
+        "The Tragedy Of Macbeth",
+        3.0
+    ],
+    [
+        "Duncan",
+        "The Tragedy Of Macbeth",
+        18.0
+    ],
+    [
+        "Fleance",
+        "The Tragedy Of Macbeth",
+        2.0
+    ],
+    [
+        "Hecate",
+        "The Tragedy Of Macbeth",
+        2.0
+    ],
+    [
+        "Lady Macbeth",
+        "The Tragedy Of Macbeth",
+        59.0
+    ],
+    [
+        "Lady Macduff",
+        "The Tragedy Of Macbeth",
+        19.0
+    ],
+    [
+        "Lennox",
+        "The Tragedy Of Macbeth",
+        21.0
+    ],
+    [
+        "Macbeth",
+        "The Tragedy Of Macbeth",
+        146.0
+    ],
+    [
+        "Macduff",
+        "The Tragedy Of Macbeth",
+        59.0
+    ],
+    [
+        "Malcolm",
+        "The Tragedy Of Macbeth",
+        40.0
+    ],
+    [
+        "Menteith",
+        "The Tragedy Of Macbeth",
+        5.0
+    ],
+    [
+        "Porter",
+        "The Tragedy Of Macbeth",
+        4.0
+    ],
+    [
+        "Ross",
+        "The Tragedy Of Macbeth",
+        39.0
+    ],
+    [
+        "Seyton",
+        "The Tragedy Of Macbeth",
+        5.0
+    ],
+    [
+        "Siward",
+        "The Tragedy Of Macbeth",
+        11.0
+    ],
+    [
+        "Son (Macduffs son)",
+        "The Tragedy Of Macbeth",
+        14.0
+    ],
+    [
+        "Young Siward",
+        "The Tragedy Of Macbeth",
+        4.0
+    ],
+    [
+        "The Tragedy Of Othello",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Bianca (Mistress to Cassio)",
+        "The Tragedy Of Othello",
+        15.0
+    ],
+    [
+        "Brabantio",
+        "The Tragedy Of Othello",
+        30.0
+    ],
+    [
+        "Cassio",
+        "The Tragedy Of Othello",
+        110.0
+    ],
+    [
+        "Desdemona",
+        "The Tragedy Of Othello",
+        165.0
+    ],
+    [
+        "Duke of Venice",
+        "The Tragedy Of Othello",
+        25.0
+    ],
+    [
+        "Emilia",
+        "The Tragedy Of Othello",
+        103.0
+    ],
+    [
+        "Gratiano (Brother to Brabantio)",
+        "The Tragedy Of Othello",
+        20.0
+    ],
+    [
+        "Iago",
+        "The Tragedy Of Othello",
+        272.0
+    ],
+    [
+        "Lodovico",
+        "The Tragedy Of Othello",
+        33.0
+    ],
+    [
+        "Montano",
+        "The Tragedy Of Othello",
+        24.0
+    ],
+    [
+        "Othello",
+        "The Tragedy Of Othello",
+        274.0
+    ],
+    [
+        "Roderigo",
+        "The Tragedy Of Othello",
+        59.0
+    ],
+    [
+        "Romeo And Juliet",
+        "Tragedies",
+        NaN
+    ],
+    [
+        "Abraham",
+        "Romeo And Juliet",
+        5.0
+    ],
+    [
+        "Balthasar (Servant to Romeo)",
+        "Romeo And Juliet",
+        12.0
+    ],
+    [
+        "Benvolio",
+        "Romeo And Juliet",
+        64.0
+    ],
+    [
+        "Capulet",
+        "Romeo And Juliet",
+        51.0
+    ],
+    [
+        "Friar John",
+        "Romeo And Juliet",
+        4.0
+    ],
+    [
+        "Friar Laurence",
+        "Romeo And Juliet",
+        55.0
+    ],
+    [
+        "Gregory",
+        "Romeo And Juliet",
+        15.0
+    ],
+    [
+        "Juliet",
+        "Romeo And Juliet",
+        118.0
+    ],
+    [
+        "Lady Capulet",
+        "Romeo And Juliet",
+        45.0
+    ],
+    [
+        "Lady Montague",
+        "Romeo And Juliet",
+        2.0
+    ],
+    [
+        "Mercutio",
+        "Romeo And Juliet",
+        62.0
+    ],
+    [
+        "Montague",
+        "Romeo And Juliet",
+        10.0
+    ],
+    [
+        "Paris",
+        "Romeo And Juliet",
+        23.0
+    ],
+    [
+        "Peter (Servant to Juliets Nurse)",
+        "Romeo And Juliet",
+        13.0
+    ],
+    [
+        "Prince Escalus",
+        "Romeo And Juliet",
+        16.0
+    ],
+    [
+        "Romeo",
+        "Romeo And Juliet",
+        163.0
+    ],
+    [
+        "Sampson",
+        "Romeo And Juliet",
+        20.0
+    ],
+    [
+        "Tybalt",
+        "Romeo And Juliet",
+        17.0
+    ]
+],{
+    "highlightOnMouseOver": true,
+    "maxDepth": 1,
+    "maxPostDepth": 2,
+    "minHighlightColor": "#8c6bb1",
+    "midHighlightColor": "#9ebcda",
+    "maxHighlightColor": "#edf8fb",
+    "minColor": "#009688",
+    "midColor": "#f7f7f7",
+    "maxColor": "#ee8100",
+    "headerHeight": 15,
+    "showScale": true,
+    "useWeightedAverageForAggregation": true
+}
+    )
+  </script>
+ </div>
+</body>
+</html>

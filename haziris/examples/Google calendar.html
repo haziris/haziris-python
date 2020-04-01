@@ -1,0 +1,89 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Calendar Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleCalendarChart( df, options ){
+
+      google.charts.load('current', {'packages': ['calendar']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+
+      let data = df.map((r,i) => ( i==0 ? r : [ new Date(r[0]+' 00:00:00'), r[1] ] ) )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.visualization.Calendar(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( data ), options );
+      }
+  }
+  googleCalendarChart(
+    [
+    [
+        "Date",
+        "Attendance"
+    ],
+    [
+        "2012-03-13",
+        37032
+    ],
+    [
+        "2012-03-14",
+        38024
+    ],
+    [
+        "2012-03-15",
+        38024
+    ],
+    [
+        "2012-03-16",
+        38108
+    ],
+    [
+        "2012-03-17",
+        38229
+    ],
+    [
+        "2012-03-18",
+        37967
+    ],
+    [
+        "2012-03-20",
+        36770
+    ],
+    [
+        "2012-03-21",
+        37839
+    ],
+    [
+        "2012-03-30",
+        37359
+    ]
+],{
+    "colorAxis": {
+        "colors": [
+            "yellow",
+            "red"
+        ]
+    }
+}
+  )
+  </script>
+ </div>
+</body>
+</html>

@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Gantt Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleGanttChart( df, options ){
+      google.charts.load('current', {'packages': ['gantt']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let mapRow = (r => ([
+           r[ 'Task ID'         ],
+           r[ 'Task Name'       ],
+           r[ 'Resource'        ],
+           r[ 'Start Date'      ] != null ? new Date(r['Start Date']) : null,
+           r[ 'End Date'        ] != null ? new Date(r['End Date'  ]) : null,
+           r[ 'Duration'        ],
+           r[ 'Percent Complete'],
+           r[ 'Dependencies'    ]
+        ]))
+
+        let ganttData = df.map( r => mapRow(r) )
+
+        let data =  new google.visualization.DataTable();
+
+        data.addColumn( 'string', 'Task ID'          );
+        data.addColumn( 'string', 'Task Name'        );
+        data.addColumn( 'string', 'Resource'         );
+        data.addColumn( 'date'  , 'Start Date'       );
+        data.addColumn( 'date'  , 'End Date'         );
+        data.addColumn( 'number', 'Duration'         );
+        data.addColumn( 'number', 'Percent Complete' );
+        data.addColumn( 'string', 'Dependencies'     );
+
+        data.addRows(ganttData)
+
+        let chart = new google.visualization.Gantt(document.getElementById('chart-div'));
+
+        chart.draw( data, options );
+      }
+  }
+  googleGanttChart(
+    [
+    {
+        "Task ID":"Research",
+        "Task Name":"Find sources",
+        "Start Date":"2015-01-01 00:00:00",
+        "End Date":"2015-01-05 00:00:00",
+        "Duration":null,
+        "Percent Complete":100,
+        "Dependencies":null
+    },
+    {
+        "Task ID":"Write",
+        "Task Name":"Write paper",
+        "Start Date":null,
+        "End Date":"2015-01-09 00:00:00",
+        "Duration":259200000.0,
+        "Percent Complete":25,
+        "Dependencies":"Research,Outline"
+    },
+    {
+        "Task ID":"Cite",
+        "Task Name":"Create bibliography",
+        "Start Date":null,
+        "End Date":"2015-01-07 00:00:00",
+        "Duration":86400000.0,
+        "Percent Complete":20,
+        "Dependencies":"Research"
+    },
+    {
+        "Task ID":"Complete",
+        "Task Name":"Hand in paper",
+        "Start Date":null,
+        "End Date":"2015-01-10 00:00:00",
+        "Duration":86400000.0,
+        "Percent Complete":0,
+        "Dependencies":"Cite,Write"
+    },
+    {
+        "Task ID":"Outline",
+        "Task Name":"Outline paper",
+        "Start Date":null,
+        "End Date":"2015-01-06 00:00:00",
+        "Duration":86400000.0,
+        "Percent Complete":100,
+        "Dependencies":"Research"
+    }
+],{}
+  )
+  </script>
+ </div>
+</body>
+</html>

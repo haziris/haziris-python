@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Column Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleColumnChart( df, options ){
+
+      google.charts.load('current', {'packages': ['corechart']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.visualization.ColumnChart(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( df ), options );
+      }
+  }
+  googleColumnChart(
+    [
+    [
+        "Element",
+        "Density"
+    ],
+    [
+        "Copper",
+        8.94
+    ],
+    [
+        "Silver",
+        10.49
+    ],
+    [
+        "Gold",
+        19.3
+    ],
+    [
+        "Platinum",
+        21.45
+    ]
+],{
+    "legned": "None"
+}
+  )
+  </script>
+ </div>
+</body>
+</html>

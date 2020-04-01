@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Haziris: Google Candlestick Chart</title>
+</head>
+<script src="https://www.gstatic.com/charts/loader.js"></script>
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+
+<body>
+ <div id='chart-div'></div>
+  <script>
+    function googleCandlestickChart( df, options ){
+
+      google.charts.load('current', {'packages': ['corechart']})
+
+      $('#chart-div')
+          .width(  0.95*window.innerWidth  )
+          .height( 0.95*window.innerHeight )
+      
+      google.charts.setOnLoadCallback( chart )
+
+      function chart(){
+        let chart = new google.visualization.CandlestickChart(document.getElementById('chart-div'));
+
+        chart.draw( google.visualization.arrayToDataTable( df ), options );
+      }
+  }
+  googleCandlestickChart(
+    [
+    [
+        "Day",
+        "min",
+        "start",
+        "end",
+        "max"
+    ],
+    [
+        "Mon",
+        20,
+        28,
+        38,
+        45
+    ],
+    [
+        "Tue",
+        31,
+        38,
+        55,
+        66
+    ],
+    [
+        "Wed",
+        50,
+        55,
+        77,
+        80
+    ],
+    [
+        "Thu",
+        77,
+        77,
+        66,
+        50
+    ],
+    [
+        "Fri",
+        68,
+        66,
+        22,
+        15
+    ]
+],{
+    "legend": "none"
+}
+  )
+  </script>
+ </div>
+</body>
+</html>
