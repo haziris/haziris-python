@@ -10,4 +10,4 @@ df = pd.DataFrame([
   columns = ['Year', 'Sales', 'Expenses', 'Profit']
 )
 
-hz.google_material_bar_chart(df, "Google material bar.html", {'legned':'None'})
+hz.google_material_bar_chart(df, "google_material_bar.html", {'legned':'None'})

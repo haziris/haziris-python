@@ -10,4 +10,4 @@ df = pd.DataFrame({
   'd': np.random.rand(5) 
 })
 
-hz.google_bar_chart(df, "Google bar 1.html")
+hz.google_bar_chart(df, "google_bar_1.html")

@@ -22,4 +22,4 @@ df = pd.DataFrame([
   columns = ['Task ID', 'Task Name', 'Resource', 'Start Date', 'End Date', 'Percent Complete'] 
 )
 
-hz.google_gantt_chart(df, "Google gantt - Grouping.html")
+hz.google_gantt_chart(df, "google_gantt_grouping.html")

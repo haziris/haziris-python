@@ -12,4 +12,4 @@ df = pd.DataFrame([
 )
 options = { 'title': 'My Daily Activities', 'pieHole': 0.4 }
 
-hz.google_pie_chart( df, "Google pie - Donut.html", options )
+hz.google_pie_chart( df, "google_pie_donut.html", options )

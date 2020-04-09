@@ -12,4 +12,4 @@ df = pd.DataFrame([
   columns = ['From', 'To', 'Weight']
 )
 
-hz.google_sankey_chart( df, "Google sankey.html" )
+hz.google_sankey_chart( df, "google_sankey.html" )

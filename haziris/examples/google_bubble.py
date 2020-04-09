@@ -32,4 +32,4 @@ options = {
     }
   }
 
-hz.google_bubble_chart( df, "Google bubble.html", options )
+hz.google_bubble_chart( df, "google_bubble.html", options )

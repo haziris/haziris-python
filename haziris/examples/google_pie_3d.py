@@ -13,4 +13,4 @@ df = pd.DataFrame([
 
 options = { 'title': 'My Daily Activities', 'is3D': True }
 
-hz.google_pie_chart( df, "Google pie - 3D.html", options )
+hz.google_pie_chart( df, "google_pie_3d.html", options )

@@ -56,4 +56,4 @@ options = {
     }
   }
 
-hz.google_scatter_chart( df, "Google scatter - Dual y.html", options )
+hz.google_scatter_chart( df, "google_scatter_dual_y.html", options )

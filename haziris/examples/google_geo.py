@@ -12,4 +12,4 @@ df = pd.DataFrame([
   columns = ['Country', 'Popularity']
 )
 
-hz.google_geo_chart(df, "Google geo.html")
+hz.google_geo_chart(df, "google_geo.html")

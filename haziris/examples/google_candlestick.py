@@ -11,4 +11,4 @@ df = pd.DataFrame([
   columns = ['Day', 'min', 'start', 'end', 'max']
 )
 
-hz.google_candlestick_chart( df, "Google candlestick.html", {'legend': 'none'} )
+hz.google_candlestick_chart( df, "google_candlestick.html", {'legend': 'none'} )

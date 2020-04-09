@@ -6,4 +6,4 @@ df = pd.DataFrame({
   'Density' : [    8.94,   10.49, 19.30,     21.45]
 })
 
-hz.google_column_chart(df, "Google column.html", {'legned':'None'})
+hz.google_column_chart(df, "google_column.html", {'legned':'None'})

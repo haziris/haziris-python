@@ -8,4 +8,4 @@ df = pd.DataFrame({
   'Mystery/Crime'    : [    20,    23,    29]
 })
 
-hz.google_bar_chart(df, "Google bar - stacked.html", {'isStacked': True})
+hz.google_bar_chart(df, "google_bar_stacked.html", {'isStacked': True})

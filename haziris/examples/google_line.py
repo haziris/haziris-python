@@ -14,4 +14,4 @@ df = pd.DataFrame([
   columns = ['name', 's1', 's2', 's3', 's4', 's5', 's6', 's7']
 )
 
-hz.google_line_chart(df, "Google line.html", {'curveType':'function'})
+hz.google_line_chart(df, "google_line.html", {'curveType':'function'})

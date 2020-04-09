@@ -7,4 +7,4 @@ df = pd.DataFrame({
   'Expenses': [400   ,   460,  1120,   540]
 })
 
-hz.google_area_chart(df, "Google area.html")
+hz.google_area_chart(df, "google_area.html")

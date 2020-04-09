@@ -21,4 +21,4 @@ options = {
   }
 }
 
-hz.google_calendar_chart(df, "Google calendar.html", options)
+hz.google_calendar_chart(df, "google_calendar.html", options)

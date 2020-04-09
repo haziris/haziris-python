@@ -15,4 +15,4 @@ options = {
   }
 }
 
-hz.google_timeline_chart( df, "Google timelines - No label.html", options )
+hz.google_timeline_chart( df, "google_timeline_no_label.html", options )

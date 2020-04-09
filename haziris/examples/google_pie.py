@@ -11,4 +11,4 @@ df = pd.DataFrame([
   columns = ['Task', 'Hours per Day']
 )
 
-hz.google_pie_chart( df, "Google pie.html" )
+hz.google_pie_chart( df, "google_pie.html" )

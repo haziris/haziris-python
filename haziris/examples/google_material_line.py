@@ -20,4 +20,4 @@ df = pd.DataFrame([
   columns = ['Day', 'Guardians of the Galaxy', 'The Avengers', 'Transformers: Age of Extinction']
 )
 
-hz.google_material_line_chart( df, "Google material line.html" )
+hz.google_material_line_chart( df, "google_material_line.html" )

@@ -8,4 +8,4 @@ df = pd.DataFrame({
   'Mystery/Crime'    : [    20,    23,    29]
 })
 
-hz.google_column_chart(df, "Google column - stacked.html", {'isStacked': True})
+hz.google_column_chart(df, "google_column_stacked.html", {'isStacked': True})

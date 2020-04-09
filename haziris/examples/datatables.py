@@ -70,4 +70,4 @@ html_table = df.to_html(
   justify  = "left"
 )
 
-hz.datatables( html_table, "Datatables.html" )
+hz.datatables( html_table, "datatables.html" )

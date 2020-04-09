@@ -61,4 +61,4 @@ options = {
     }
   }
 
-hz.google_material_scatter_chart( df, "Google material scatter- Dual y.html", options )
+hz.google_material_scatter_chart( df, "google_material_scatter_dual_y.html", options )

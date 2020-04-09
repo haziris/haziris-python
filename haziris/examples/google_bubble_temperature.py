@@ -19,4 +19,4 @@ options = {
   }
 }
 
-hz.google_bubble_chart(df, "Google bubble - Temperature.html", options)
+hz.google_bubble_chart(df, "google_bubble_temperature.html", options)

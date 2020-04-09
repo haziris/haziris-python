@@ -413,4 +413,4 @@ options = {
   'useWeightedAverageForAggregation': True
 }
 
-hz.google_treemap_chart( df, "Google treemap - Highlights.html", options )
+hz.google_treemap_chart( df, "google_treemap_highlights.html", options )

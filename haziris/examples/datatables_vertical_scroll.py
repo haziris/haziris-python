@@ -76,4 +76,4 @@ html_table = df.to_html(
   justify  = "left"
 )
 
-hz.datatables( html_table, "Datatables - vertical scroll.html", options )
+hz.datatables( html_table, "datatables_vertical_scroll.html", options )

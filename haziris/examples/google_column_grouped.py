@@ -8,4 +8,4 @@ df = pd.DataFrame({
   'Mystery/Crime'    : [    20,    23,    29]
 })
 
-hz.google_column_chart(df, "Google column - grouped.html", {'colors': ['#FFD700', '#C0C0C0', '#8C7853']})
+hz.google_column_chart(df, "google_column_grouped.html", {'colors': ['#FFD700', '#C0C0C0', '#8C7853']})

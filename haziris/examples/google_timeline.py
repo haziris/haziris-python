@@ -9,4 +9,4 @@ df = pd.DataFrame([
   columns = ['President', 'Start', 'End']
 )
 
-hz.google_timeline_chart( df, "Google timelines.html" )
+hz.google_timeline_chart( df, "google_timeline.html" )

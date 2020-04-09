@@ -19,4 +19,4 @@ options = {
   'legend': 'none'
 }
 
-hz.google_material_scatter_chart( df, "Google material scatter.html", options )
+hz.google_material_scatter_chart( df, "google_material_scatter.html", options )

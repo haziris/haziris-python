@@ -91,4 +91,4 @@ previous = pd.DataFrame([
   columns = ['', 'Medicine 1', 'Medicine 2']
 )
 
-hz.google_scatter_chart( df, "Google scatter - diff.html", previous=previous )
+hz.google_scatter_chart( df, "google_scatter_diff.html", previous=previous )

@@ -15,7 +15,7 @@ df = pd.DataFrame([
 )
 
 hz.google_line_chart(df, 
-  "Google line - Interval area.html", 
+  "google_line_interval_area.html", 
   {'curveType':'function', 'intervals': { 'style':'area' }, 'legend': 'none'}, 
   intervals =['s2', 's3', 's4', 's5', 's6', 's7']
 )

@@ -27,4 +27,4 @@ options = {
   }
 }
 
-hz.google_timeline_chart( df, "Google timelines - Grouping.html", options )
+hz.google_timeline_chart( df, "google_timeline_grouping.html", options )

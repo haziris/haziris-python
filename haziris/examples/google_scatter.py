@@ -19,4 +19,4 @@ options = {
   'legend': 'none'
 }
 
-hz.google_scatter_chart( df, "Google scatter.html", options )
+hz.google_scatter_chart( df, "google_scatter.html", options )

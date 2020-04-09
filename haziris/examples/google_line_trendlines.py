@@ -47,6 +47,6 @@ options = {
   }
   
 hz.google_line_chart(df, 
-  "Google line - Trendlines.html", 
+  "google_line_trendlines.html", 
   options
 )

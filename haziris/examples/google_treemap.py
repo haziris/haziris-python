@@ -35,4 +35,4 @@ df = pd.DataFrame([
   columns = ['Location', 'Parent', 'Market trade volume (size)', 'Market increase/decrease (color)']
 )
 
-hz.google_treemap_chart( df, "Google treemap.html" )
+hz.google_treemap_chart( df, "google_treemap.html" )

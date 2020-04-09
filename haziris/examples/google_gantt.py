@@ -15,4 +15,4 @@ df = pd.DataFrame([
   columns = ['Task ID', 'Task Name', 'Start Date', 'End Date', 'Duration', 'Percent Complete', 'Dependencies'] 
 )
 
-hz.google_gantt_chart(df, "Google gantt.html")
+hz.google_gantt_chart(df, "google_gantt.html")
