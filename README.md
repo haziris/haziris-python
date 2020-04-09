@@ -42,7 +42,7 @@ The examples folder, contains more such examples.
 - [DataTables - Vertical scroll](http://vizjs.org/examples/haziris-python-datatables_vertical_scroll.html)
 - [Google Area](http://vizjs.org/examples/haziris-python-google_area.html)
 - [Google Bar](http://vizjs.org/examples/haziris-python-google_bar.html)
-- [Google Bar Ex1](http://vizjs.org/examples/haziris-python-google_bar_1.html)
+- [Google Bar Grouped](http://vizjs.org/examples/haziris-python-google_bar_1.html)
 - [Google Bar Stacked](http://vizjs.org/examples/haziris-python-google_bar_stacked.html)
 - [Google Bubble](http://vizjs.org/examples/haziris-python-google_bubble.html)
 - [Google Bubble Temperature](http://vizjs.org/examples/haziris-python-google_bubble_temperature.html)
